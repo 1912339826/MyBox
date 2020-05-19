@@ -1,4 +1,4 @@
-# mydome
+# 此项目
 
 > 初始构建法
 
@@ -20,4 +20,6 @@ npm run build --report
 
 有关工作原理的详细说明, 请查看 [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+# 内容说明
 
+此项目为作者个人编辑使用,暂无服务器.
