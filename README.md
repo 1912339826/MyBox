@@ -1,10 +1,21 @@
-# -
-这是一个公开的仓库
+# mydome
 
-可能有任何的东西在这里面
+> 初始构建法
 
-不过这始终是一个vue架构的项目
+## Build Setup
 
-因为拥有者只会vue
+``` bash
+# install dependencies
+npm install
 
-vue好用,太好了
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
