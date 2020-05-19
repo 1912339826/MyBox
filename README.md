@@ -2,20 +2,22 @@
 
 > 初始构建法
 
-## Build Setup
+## 建造设置
 
 ``` bash
-# install dependencies
+# 安装依赖项
 npm install
 
-# serve with hot reload at localhost:8080
+# 在本地主机 :8080进行热重载
 npm run dev
 
-# build for production with minification
+# 精简生产/打包上线
 npm run build
 
-# build for production and view the bundle analyzer report
+# 为生产而构建并查看包分析器报告
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+有关工作原理的详细说明, 请查看 [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
