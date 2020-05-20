@@ -8,10 +8,14 @@ import router from './router'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 // normalize.css（css样式初始化）
+import marked from 'marked'
 import 'normalize.css/normalize.css'
+import './assets/css/github-markdown.css'
 Vue.prototype.$req = req
 window.api = api
 Vue.use(Antd);
+Vue.prototype.$marked = marked
+
 
 Vue.config.productionTip = false
 

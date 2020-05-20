@@ -69,6 +69,20 @@ module.exports = {
       {
         test: /\.less$/,
         loader: "style-loader!css-loader!less-loader",
+      },
+      // 使用.md文件  npm i markdown-loader html-loader --save-dev  https://segmentfault.com/q/1010000012829376
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
+            options: {
+            }
+          }
+        ]
       }
     ]
   },
