@@ -1,8 +1,12 @@
 <template>
   <div id="home">
     <section>
-      <div class="list">
-        <a-button type="primary" :block="true">Primary</a-button>
+      <div class="list" v-for="(item, index) in list" :key="index" @click="toPage(item.url)">
+        <a-button
+          type="primary"
+          :block="true"
+          style="height:25vw;background-color: rgb(221, 221, 221); color: #000;"
+        >{{item.name}}</a-button>
       </div>
     </section>
   </div>
@@ -10,7 +14,18 @@
 <script>
 export default {
   name: "home",
+  data() {
+    return {
+      list: [
+        { name: "conçu", url: "conçu" },
+        { name: "a", url: "a" }
+      ]
+    };
+  },
   methods: {
+    toPage(url) {
+      this.$router.push({ path: `/${url}` });
+    },
     // 例子
     async example() {
       let res = await this.$req(window.api.example, {});
@@ -51,7 +66,8 @@ export default {
     display: flex;
     flex-wrap: wrap;
     .list {
-      width: 50%;
+      width: 47%;
+      margin-left: 2%;
     }
   }
 }
