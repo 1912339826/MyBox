@@ -1,7 +1,8 @@
 // 构想
+// 这里是一些构想,比较混乱
 <template>
   <div id="conçu">
-gouxiangye
+
   </div>
 </template>
 

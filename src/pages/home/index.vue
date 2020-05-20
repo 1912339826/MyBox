@@ -2,11 +2,7 @@
   <div id="home">
     <section>
       <div class="list" v-for="(item, index) in list" :key="index" @click="toPage(item.url)">
-        <a-button
-          type="primary"
-          :block="true"
-          style="height:25vw;background-color: rgb(221, 221, 221); color: #000;"
-        >{{item.name}}</a-button>
+        <a-button type="primary" :block="true" style="height:22vw;">{{item.name}}</a-button>
       </div>
     </section>
   </div>
@@ -18,6 +14,8 @@ export default {
     return {
       list: [
         { name: "conçu", url: "conçu" },
+        { name: "a", url: "a" },
+        { name: "a", url: "a" },
         { name: "a", url: "a" }
       ]
     };
@@ -68,6 +66,7 @@ export default {
     .list {
       width: 47%;
       margin-left: 2%;
+      margin-top: 2%;
     }
   }
 }
