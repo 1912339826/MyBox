@@ -3,8 +3,16 @@
 // 有关marked.js简易手册(使用.md文件): https://www.cnblogs.com/djtao/p/6224399.html
 <template>
   <div id="conçu">
-    <div id="content">
-        
+    <div class="collapse" style="width: 27%;">
+      <a-collapse v-model="activeKey">
+        <a-collapse-panel header="This is panel header 1" v-for="item in dd" :key="item">
+          <p>11</p>
+        </a-collapse-panel>
+      </a-collapse>
+    </div>
+    <div class="content">
+      <div class="rightTop"></div>
+      <section v-html="html" class="box"></section>
     </div>
   </div>
 </template>
@@ -15,7 +23,11 @@ export default {
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      activeKey: [1],
+      html: "",
+      dd: ["1"]
+    };
   },
   created() {},
   mounted() {
@@ -37,7 +49,7 @@ export default {
         smartLists: true,
         smartypants: false
       }); //基本设置
-      document.getElementById(element).innerHTML = marked(md);
+      this.html = marked(md);
     }
   },
   filters: {},
@@ -48,8 +60,42 @@ export default {
 
 <style lang="less" scoped>
 #conçu {
-    #content{
-
+  display: flex;
+  position: relative;
+  height: 100vh;
+  .collapse {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: left 250ms ease;
+  }
+  .content {
+    height: 100vh;
+    overflow-y: auto;
+    transition: left 250ms ease;
+    position: absolute;
+    left: 27%;
+    top: 0;
+    padding: 2vw;
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-duration: 2s;
+    .rightTop {
+      width: 100%;
     }
+    .box {
+      text-align: justify;
+      width: 50vw;
+      /deep/p {
+        font-size: 0.08rem;
+        text-indent: 0.16rem;
+      }
+    }
+  }
 }
 </style>
